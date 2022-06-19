@@ -117,6 +117,15 @@
                 width: 18rem;
             }
         }
+
+        span{
+          animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker{
+          50%{
+            opacity: 0;
+          }
+        }
       </style>
 </head>
 <body>
@@ -173,7 +182,7 @@
           </nav>
           <div class="container">
             <div class="left">
-                <h1>Welcome</h1>
+                <h1 id="msg">Welcome</h1>
                 <p>We are not magicians who can say, "You won't suffer this anymore" but YES! We can do something that you won't need to run through your medicine and that is - maintaining a proper diet</p>
                 <p><a href="#sec"><button>Explore</button></a></p>
             </div>
@@ -216,6 +225,19 @@
           </div>
       </div>
 
+
+      <script>
+        var msgArr = ["Welcome"];
+        var textPosition = 0;
+        var speed = 300;
+
+        typewriter = ()=>{
+          document.querySelector("#msg").innerHTML = msgArr[0].substring(0, textPosition) + "<span>\u007c</span>";
+          if(textPosition++ != msgArr[0].length)
+          setTimeout(typewriter, speed);
+        }
+        window.addEventListener("load", typewriter);
+      </script>
       <%- include('./partials/footer'); -%>
 <!-- </body>
 </html> -->

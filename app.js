@@ -165,8 +165,8 @@ app.post("/uploadform",function(req, res){
             if(err) {
                 res.send(err)
             } else {
-                res.send("File uploaded successfully")
-                
+                res.send("Submitted Successfully");
+               
             }
         })
     }
