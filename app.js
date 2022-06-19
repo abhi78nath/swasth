@@ -5,6 +5,7 @@ const app                   = express();
 const ejs                   = require("ejs");
 const bodyParser            = require("body-parser");
 const mongoose              = require("mongoose");
+const upload = require("express-fileupload");
 const session               = require("express-session");
 const passport              = require("passport");
 const LocalStrategy           = require("passport-local");
@@ -35,6 +36,7 @@ app.use(function(req, res, next){
     next();
 });
 
+app.use(upload());
 //--------database------------
 // mongoose.connect("mongodb://localhost:27017/userDB",{useNewUrlParser:true});
 
@@ -163,7 +165,7 @@ app.post("/uploadform",function(req, res){
             if(err) {
                 res.send(err)
             } else {
-                res.send("File uploaded successfully");
+                res.send("File uploaded successfully")
                 
             }
         })
