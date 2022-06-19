@@ -1,72 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="http://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Home Workout</title>
-  </head>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-    * {
-      font-family: "Poppins", sans-serif;
-    }
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-    .container {
-      background-image: url("https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .headcontain {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background-color: white;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      transform: translate(-50%, -50%);
-      text-align: justify;
-    }
-    .headcontain h3 {
-      text-align: center;
-    }
-    .headcontain .con2 {
-      text-align: center;
-    }
-    .headcontain .con2 img{
-      width: 20rem;
-    }
-    @media screen and (max-width: 768px) {
-      .container {
-        background-image: none;
-      }
-    }
-  </style>
-  <body>
-    <div class="container">
-      <div class="headcontain">
-        <div class="con1">
-          <h3>Home Workout</h3>
-          <p>
-            If the idea of a home workout makes you yawn, think again! When
-            executed correctly, using just your body weight can give you a run
-            for your money. So, whether the gym isn’t your thing or you’re short
-            on time, clear out a space in the living room and prepare to sweat.
-          </p>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+          font-family: 'Poppins', sans-serif;
+        }
+        .headbox{
+            /* background: #fafafa; */
+            background-color: white;
+            background-image: url(./img/patterns.png);
+            /* background: yellowgreen; */
+
+        }
+        .navbar{
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .container{
+            display: flex;
+            margin-top: 7rem;
+            margin-bottom: 10rem;
+            overflow: hidden;
+            text-align: justify;
+            justify-content: center;
+        }
+        .container .left{
+            flex: 50%;
+        }
+        .container .left p, h1{
+            margin: 2rem;
+            width: 25rem;
+        }
+        .container .right{
+            flex: 50%;
+        }
+        #heroimg{
+            width: 25rem;
+        }
+        button{
+        border-radius: 2rem;
+        width: 6rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+        }
+        button:hover{
+            background-color: white;
+        }
+
+
+
+        .section{
+            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+            align-items: center;
+        }
+        .section h3{
+            margin-top: 5rem;
+        }
+        .section-head{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+        .override .card{
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+            border:none;
+            /* max-width:23rem; */
+
+        }
+        .override .card-body{
+            /* background-color: #AFC3FF; */
+        }
+
+        #img{
+            width: 21rem;
+            /* height: 2rem; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        #override .navbar{
+            justify-content: center;
+        }
+        #override .head{
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+
+
+
+
+        .card{
+            width: 18rem;
+            min-width: 20rem;
+        }
+        .card-header
+        {
+            text-align: center;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:20rem;
+        }
+        .override .btn{
+            margin-top: 6px;
+        }
+        .left button a{
+            text-decoration: none;
+            color:black;
+        }
+
+        .long-card{
+            display: flex;
+            max-width: 82rem;
+            /* border: 2px solid; */
+            box-shadow: 0px 4px 12px rgb(0 0 0 / 50%);
+            margin-top: 15px;
+            padding: 1rem;
+        }
+        .long-card .right{
+            flex-direction: row-reverse;
+        }
+        .text{
+            display: flex;
+            margin-left: 6rem;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .a{
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width:768px) {
+            .container{
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            .container .left p, h1{
+                margin: 2rem;
+                width: 18rem;
+            }
+            .long-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .text{
+                margin-left: 2rem;
+            }
+        }
+        @media screen and (max-width:322px){
+            #img{
+                width:19rem;
+            }
+            .long-card{
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body id="override">
+  <div class="headbox">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-family: 'Samarkan', sans-serif;">Swasth</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+            
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/register">Sign Up</a>
+                </li>
+              </ul>
+            </form> -->
+          </div>
         </div>
-        <div class="con2">
-          <figure>
-            <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt=""/>
-            <figcaption>Fig. - Dumbbells and Resistance Tube</figcaption>
-          </figure>
+      </nav>
+      <div class="head">
+        <h2>Home Workout</h2>
+      </div>
+      <div class="container">
+        <img id="heroimg" src="./img/main.jpg" alt="">
+        
+      </div>
+  </div>
+
+  <div class="section">
+    <div class="a"><h3>Push-Ups</h3>
+      <div class="long-card left">
+        <div class="card text-black mb-3" style="max-width: 20rem;">
+            <!-- <div class="card-header">Diseases</div> -->
+            <div class="card-body">
+                <img src="./img/pushup.png"
+                alt="" id="img">
+                <!-- <button type="button" class="btn btn-primary">Visit</button> -->
+            </div>
+        </div>
+        <div class="text">
+          <div class="part1">
+            <p>Push-ups may seem like a basic exercise that works only your upper arms and chest, but when you do them the right way, they use muscles all over your body. You can do them just about anywhere, they can be adjusted to fit any ability level -- and they’re free!
+            </p>
+  
+          </div>
+          <div class="part2">
+            <h4>Benefits</h4>
+            <p>1. Burning calories
+              2. Protecting your shoulders and lower back from injuries
+              3. Improving your balance and posture
+              4. Improving your flexibility
+              5. Improving your performance in sports and athletic activities
+  
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="a">
+      <h3>Pull- Ups</h3>
+      <div class="long-card right">
+        <div class="card text-black mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <img src="https://static.vecteezy.com/system/resources/previews/002/520/921/original/pull-up-exercises-and-training-with-weights-free-vector.jpg"
+                alt="" id="img">
+            </div>
+        </div>
+        <div class="text">
+          <div class="part1">
+            <p>Padmasana may seem simple, it is considered an intermediate to advanced pose and may not be comfortable for beginners. In basic terms, Lotus Pose is sitting cross-legged with the spine vertically straight, making it ideal for meditation and concentration.
+
+              The religious correlation between Padmasana and Buddhism is rather significant. In Sanskrit, Padmasana is derived from the words padma (meaning lotus) and sana (meaning seat or throne). Interestingly, the lotus, a sacred aquatic plant, is one of the Eight Auspicious Symbols and one of Buddhism’s most recognized motifs. Every important Buddhist diety is pictured either sitting on a lotus or holding one in their hand.
+            </p>
+
+          </div>
+          <div class="part2">
+            <h4>Benefits</h4>
+            <p>1. Work Many Muscles at a Time
+              2. Good for Grip Strength
+              3. Calorie Burner
+              4. Helps in Cardio Workouts
+              5. You Can Do It Anywhere
+              6. Improves Mental Health
+              7. Improve Joint Fluidity and Bone Health
+              
+              </p>
+
+          </div>
         </div>
       </div>
     </div>
-  </body>
+    <div class="a">
+      <h3>Sit-Ups</h3>
+      <div class="long-card right">
+        <div class="card text-black mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <img src="https://media.istockphoto.com/vectors/woman-lie-down-on-her-back-and-curl-upper-body-to-the-top-for-touch-vector-id1201871738?k=20&m=1201871738&s=612x612&w=0&h=kYfc6bBw7LnXkXLu3-47nXaEiurmeF0H6BlsXXKggUo="
+                alt="" id="img">
+            </div>
+        </div>
+        <div class="text">
+          <div class="part1">
+            <p>Situps are classic abdominal exercises done by lying on your back and lifting your torso. They use your body weight to strengthen and tone the core-stabilizing abdominal muscles.
+
+                Situps work the rectus abdominis, transverse abdominis, and obliques in addition to your hip flexors, chest, and neck. They promote good posture by working your lower back and gluteal muscles.
+                
+                With a larger range of motion, situps target more muscles than crunches and static core exercises. This makes them an ideal addition to your fitness program. Read on to learn about some of the benefits of situps, how to do them, and variations.
+            </p>
+
+          </div>
+          <div class="part2">
+            <h4>Benefits</h4>
+            <p>1. Strengthens the spine
+              2. Stretches chest and lungs, 3. shoulders, and abdomen
+              4. Tones the buttocks
+              5. Stimulates abdominal organs
+              6. Helps relieve stress and fatigue
+              7. Opens the heart and lungs
+              8. Soothes sciatica
+              9. Therapeutic for asthma
+              10. The male and female reproductive system improves.
+              </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+        
+</body>
 </html>

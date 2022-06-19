@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+          font-family: 'Poppins', sans-serif;
+        }
+        .headbox{
+            /* background: #fafafa; */
+            background-color: white;
+            background-image: url(./img/patterns\ \(1\).png);
+            /* background: yellowgreen; */
+
+        }
+        .navbar{
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .container{
+            display: flex;
+            margin-top: 7rem;
+            margin-bottom: 10rem;
+            overflow: hidden;
+            text-align: justify;
+            justify-content: center;
+        }
+        .container .left{
+            flex: 50%;
+        }
+        .container .left p, h1{
+            margin: 2rem;
+            width: 25rem;
+        }
+        .container .right{
+            flex: 50%;
+        }
+        #heroimg{
+            width: 25rem;
+        }
+        button{
+        border-radius: 2rem;
+        width: 6rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+        }
+        button:hover{
+            background-color: white;
+        }
+
+
+
+        .section{
+            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+            align-items: center;
+        }
+        .section h3{
+            margin-top: 5rem;
+        }
+        .section-head{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+        .override .card{
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+            border:none;
+            /* max-width:23rem; */
+
+        }
+        .override .card-body{
+            /* background-color: #AFC3FF; */
+        }
+
+        #img{
+            width: 21rem;
+            /* height: 2rem; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        #override .navbar{
+            justify-content: center;
+        }
+        #override .head{
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+
+
+
+
+        .card{
+            width: 18rem;
+            min-width: 20rem;
+        }
+        .card-header
+        {
+            text-align: center;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:20rem;
+        }
+        .override .btn{
+            margin-top: 6px;
+        }
+        .left button a{
+            text-decoration: none;
+            color:black;
+        }
+
+        .long-card{
+            display: flex;
+            max-width: 82rem;
+            /* border: 2px solid; */
+            box-shadow: 0px 4px 12px rgb(0 0 0 / 50%);
+            margin-top: 15px;
+            padding: 1rem;
+        }
+        .long-card .right{
+            flex-direction: row-reverse;
+        }
+        .text{
+            display: flex;
+            margin-left: 6rem;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .a{
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width:768px) {
+            .container{
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            .container .left p, h1{
+                margin: 2rem;
+                width: 18rem;
+            }
+            .long-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .text{
+                margin-left: 2rem;
+            }
+        }
+        @media screen and (max-width:322px){
+            #img{
+                width:19rem;
+            }
+            .long-card{
+                padding: 0;
+            }
+        }

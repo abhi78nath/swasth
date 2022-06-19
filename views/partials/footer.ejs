@@ -254,11 +254,16 @@
 
       <p style="color: white">Contact Us</p>
 
-      <form action="#" method="post" id="contact">
+	  <form action="https://formsubmit.co/3b784510c1979c17959404e1a371327d" method="POST" id="contact">
+		<!-- Honeypot -->
+		<input type="text" name="_honey" style="display: none;">
+  
+		<!-- Disable Captcha -->
+		<input type="hidden" name="_captcha" value="false">
 
         <input type="text" name="email" placeholder="Email">
         <textarea name="message" placeholder="Message"></textarea>
-        <button>Send</button>
+        <button type="submit">Send</button>
 
       </form>
 
