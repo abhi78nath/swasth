@@ -164,7 +164,7 @@ app.post("/uploadform",function(req, res){
                 res.send(err)
             } else {
                 res.send("File uploaded successfully");
-                res.redirect("/");
+                
             }
         })
     }
