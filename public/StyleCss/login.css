@@ -1,0 +1,37 @@
+/* body{
+    background: rgb(181,68,246);
+    background: linear-gradient(90deg, rgba(181,68,246,0.9668242296918768) 4%, rgba(9,121,69,1) 100%, rgba(0,212,255,1) 100%);
+}
+.register{
+    border: 1px dotted white;
+    background: rgb(181,68,246);
+    background: linear-gradient(90deg, rgba(181,68,246,0.9668242296918768) 4%, rgba(9,121,69,1) 100%, rgba(0,212,255,1) 100%);
+
+} */
+
+.mycard{
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+}
+
+h1{
+    text-align: center;
+    background-color: rgba(255, 235, 205, 0.753);
+}
+
+th,td{
+    border:blanchedalmond 3px solid;
+    padding: 10px;
+    margin: 40px;
+    background-color: blanchedalmond;
+    border-spacing: 10px;
+}
+
+
+thead{
+    background-color: black;
+}
+table{
+   position: relative;
+   left: 25%;
+   box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+}

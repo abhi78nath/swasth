@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consult Physician</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background-color: #fafafa;
+    }
+    .contain {
+      display: flex;
+      margin-top: 3rem;
+    }
+
+    .contain .left {
+      flex: 50%;
+      padding: 2rem;
+    }
+    .contain .left p,
+    h1 {
+      margin: 10rem;
+      width: 20rem;
+      font-size: x-large;
+    }
+
+    .contain .right {
+      flex: 50%;
+      padding: 2rem;
+    }
+
+    .contain .right form {
+      padding: 2rem;
+      width: fit-content;
+      border-radius: 0.5rem;
+      background-color: white;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contain .right form input {
+      padding: 0.4rem;
+      border: none;
+      background-color: #fafafa;
+      border-radius: 0.5rem;
+    }
+    .contain .right form textarea {
+      border-radius: 0.5rem;
+      padding: 0.4rem;
+    }
+    @media screen and (max-width: 768px) {
+      .contain {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      .contain .left p,
+      h1 {
+        margin: 1rem;
+      }
+    }
+    button{
+        background-color: white;
+        border-radius: 0.5rem;
+        width: 6rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+    button:hover{
+            background-color: black;
+            color: white;
+        }
+  </style>
+  <body>
+    <div class="contain">
+      <div class="left">
+        <p>
+          Swasth helps you connect and share your concerns with the best
+          physicians around.
+        </p>
+      </div>
+      <div class="right">
+        <form action="">
+          <p>Name</p>
+          <input type="text" placeholder="Enter your name" />
+          <p>Email</p>
+          <input type="email" name="" id="" placeholder="Enter your email address">
+          <p>Contact No.</p>
+          <input type="number" placeholder="Enter your phone no." />
+          <p>Age</p>
+          <input type="number" placeholder="Enter your age" />
+          <p>Gender</p>
+          <input type="text" placeholder="Enter your gender">
+          <p>Complaint</p>
+          <textarea name="" id="" cols="60" rows="5"></textarea>
+          <p><button type="submit">Submit</button></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
