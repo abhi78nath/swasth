@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <title>Swasth</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         *{
           font-family: 'Poppins', sans-serif;
         }
@@ -38,6 +38,9 @@
         }
         #heroimg{
             width: 30rem;
+            -webkit-box-shadow: -2px 13px 5px -3px rgba(0,0,0,0.4);
+            -moz-box-shadow: -2px 13px 5px -3px rgba(0,0,0,0.4);
+            box-shadow: -2px 13px 5px -3px rgba(0,0,0,0.4);
         }
         .left button{
         border-radius: 2rem;
@@ -136,12 +139,17 @@
           }
         }
         #preloader{
-  background: #ededed url(./loader1.gif) no-repeat center;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-}
+          background: #ededed url(./loader1.gif) no-repeat center;
+          height: 100vh;
+          width: 100%;
+          position: fixed;
+          z-index: 100;
+        }
+        /* #heroimg{
+          -webkit-box-shadow: -2px 13px 5px -3px rgba(0,0,0,0.4);
+          -moz-box-shadow: -2px 13px 5px -3px rgba(0,0,0,0.4);
+          box-shadow: -2px 13px 5px -3px rgba(0,0,0,0.4);
+        } */
       </style>
 </head>
 <body>
@@ -209,7 +217,7 @@
           </div>
     </div>
     <div class="section" id="sec">
-      <div class="card text-black mb-3" style="max-width: 20rem;">
+      <div class="card text-black mb-3 shadow-lg  mb-5 bg-body rounded" style="max-width: 20rem;">
           <div class="card-header">Diseases</div>
           <div class="card-body">
               <img src="./diseases.jpg" alt="" id="img">
@@ -219,14 +227,14 @@
 
 
 
-      <div class="card text-black mb-3" style="max-width: 20rem;">
+      <div class="card text-black mb-3 shadow-lg  mb-5 bg-body rounded" style="max-width: 20rem;">
           <div class="card-header">Basic Health Care</div>
           <div class="card-body">
               <img src="./basichealthcare.jpg" alt="" id="img">
               <a href="/basic"><button type="button" class="btn btn-primary">Visit</button></a>
           </div>
       </div>
-      <div class="card text-black mb-3" style="max-width: 20rem;">
+      <div class="card text-black mb-3 shadow-lg  mb-5 bg-body rounded" style="max-width: 20rem;">
           <div class="card-header">Consult Physician</div>
           <div class="card-body">
               <img src="./consultphysician.jpg" alt="" id="img">
@@ -234,7 +242,7 @@
 
           </div>
       </div>
-      <div class="card text-black  mb-3" style="max-width: 20rem;">
+      <div class="card text-black  mb-3 shadow-lg  mb-5 bg-body rounded" style="max-width: 20rem;">
           <div class="card-header">Medicines</div>
           <div class="card-body">
               <img src="./medicines.jpg" alt="" id="img">

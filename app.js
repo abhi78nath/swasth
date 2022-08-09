@@ -75,6 +75,9 @@ app.get("/disease",function(req,res){
 app.get("/basic",function(req,res){
     res.render("basicHealth");
 })
+app.get("/bmicalc", function(req,res){
+    res.render("bmicalc")
+})
 
 //====================
 //AUTH ROUTES
@@ -84,6 +87,8 @@ app.get("/basic",function(req,res){
 app.get("/register",function(req,res){
     res.render("register");
 });
+
+
 
 //handle sign up logic
 app.post("/register", function(req, res){
